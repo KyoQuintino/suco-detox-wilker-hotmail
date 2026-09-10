@@ -227,3 +227,43 @@ em { font-style: italic; color: #acd984; }
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+.payment-page { min-height: 100vh; background: #f5f4ef; color: var(--ink); }
+.payment-header { min-height: 82px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(24px, calc((100% - 1160px) / 2)); background: var(--green-deep); color: white; }
+.payment-brand { color: white; }
+.payment-secure { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.72); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+.payment-wrap { width: min(1030px, calc(100% - 42px)); margin: 0 auto; padding: 47px 0 90px; }
+.payment-back a { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: .13em; font-size: 9px; font-weight: 700; }
+.payment-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 100px; align-items: center; max-width: 970px; margin: 62px auto 0; }
+.payment-kicker, .hotmart-box-head span { color: var(--green); text-transform: uppercase; letter-spacing: .2em; font-size: 10px; font-weight: 800; }
+.payment-summary h1 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: clamp(48px, 5vw, 70px); line-height: .95; letter-spacing: -.05em; margin: 18px 0 23px; }
+.payment-summary p { max-width: 480px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.summary-card { display: flex; align-items: center; gap: 18px; margin: 32px 0 25px; padding: 15px 19px 15px 13px; width: min(365px, 100%); border: 1px solid var(--line); background: rgba(255,255,255,.54); border-radius: 7px; }
+.summary-cover { width: 55px; height: 72px; overflow: hidden; box-shadow: 5px 7px 13px rgba(21,61,40,.13); transform: rotate(-3deg); }
+.summary-cover img { width: 100%; height: 100%; object-fit: cover; }
+.summary-card strong, .summary-card span, .summary-card b { display: block; }
+.summary-card strong { font-size: 14px; }
+.summary-card span { color: var(--muted); font-size: 11px; margin-top: 5px; }
+.summary-card b { color: var(--green); font-size: 14px; margin-top: 10px; }
+.summary-points { display: grid; gap: 10px; color: var(--muted); font-size: 11px; }
+.summary-points div { display: flex; gap: 8px; align-items: center; }
+.summary-points svg { color: var(--green-bright); }
+.hotmart-box { background: #fffdf7; border-radius: 8px; padding: 31px 31px 27px; box-shadow: 0 20px 54px rgba(34,70,49,.14); border: 1px solid #e8eadf; }
+.hotmart-box-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.hotmart-box-head svg { color: var(--green); }
+.hotmart-box h2 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 38px; letter-spacing: -.04em; margin: 28px 0 8px; }
+.hotmart-box p { color: var(--muted); line-height: 1.55; font-size: 13px; margin: 0 0 23px; }
+.hotmart-buy-button { display: flex; justify-content: center; align-items: center; min-height: 56px; width: 100%; border-radius: 999px; background: #2d9d62; transition: transform .2s ease, background .2s ease; }
+.hotmart-buy-button:hover { background: #258953; transform: translateY(-2px); }
+.hotmart-buy-button img { max-width: 100%; height: auto; }
+.manual-checkout { display: block; color: var(--green); text-align: center; text-decoration: underline; font-size: 10px; margin-top: 18px; }
+.hotmart-note { display: flex; justify-content: center; align-items: center; gap: 7px; color: #7d8e83; font-size: 9px; margin-top: 20px; }
+.payment-footer { padding: 22px; background: #102b22; color: rgba(255,255,255,.52); text-align: center; font-size: 10px; }
+@media (max-width: 760px) {
+  .payment-header { min-height: 72px; padding: 0 17px; }
+  .payment-secure { font-size: 8px; letter-spacing: .08em; }
+  .payment-wrap { padding-top: 29px; }
+  .payment-grid { grid-template-columns: 1fr; gap: 45px; margin-top: 47px; }
+  .payment-summary h1 { font-size: 54px; }
+  .hotmart-box { padding: 25px 20px 22px; }
+}

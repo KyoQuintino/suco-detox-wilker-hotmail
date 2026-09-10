@@ -55,6 +55,10 @@ function scrollToOffer() {
   document.querySelector(checkoutAnchor)?.scrollIntoView({ behavior: "smooth" });
 }
 
+function goToPayment() {
+  window.location.href = "/pagamento";
+}
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -181,7 +185,7 @@ export default function Home() {
             <div className="price-label">por apenas</div>
             <div className="price"><small>R$</small> 19,90</div>
             <div className="price-sub">pagamento único · acesso digital</div>
-            <button className="button button-orange" onClick={() => alert("Em breve: conecte aqui o seu link de checkout da Hotmart.")}>Quero meu e-book <ArrowRight size={18} /></button>
+            <button className="button button-orange" onClick={goToPayment}>Quero meu e-book <ArrowRight size={18} /></button>
             <div className="secure-note"><ShieldCheck size={15} /> compra processada com segurança pela Hotmart</div>
           </div>
         </div>
